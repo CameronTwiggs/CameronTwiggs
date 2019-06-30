@@ -1,0 +1,67 @@
+*{
+    border: solid white 1px;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    border: solid black 1px;
+}
+
+body {
+    margin: 0;
+    background-image: url('images./high-resolution-galaxy-desktop-background-20.jpg') ;
+    background-size: 90%;
+    object-fit: fill;
+}
+
+h1 {
+ text-align: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: white;
+}
+
+.cameron {
+    /* max-width: 30%; */
+    height: 35%;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.nav, .nav__list{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nav{
+    justify-content: flex-end;
+}
+
+.nav__list{
+    list-style: none;
+    font-size: 100%;
+}
+
+.nav__list a{
+    margin: 10px;
+    padding: 20px;
+}
+
+
+.main{
+    background-color: rgba(112, 229, 233, 0.596);
+    display: flex;
+   
+}
+.cameron {
+    display: block;
+    margin: auto;
+    margin: 2%;
+}
+
+.main__intro{
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    margin: 2%
+}
