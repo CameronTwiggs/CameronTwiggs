@@ -1,0 +1,33 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    background: white;
+}
+
+.childhood_snapped{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.childhood_snapped figure{
+    background-image: url('images/print-logo.jpg');
+    height: 98px;
+    width: 229px;
+}
+
+.childhood_snapped h1{
+    width: 320px;
+}
+
+.childhood_snapped p{
+    width: 235px;
+}
+
+.childhood_snapped :last-child {
+    width: 117px;
+}

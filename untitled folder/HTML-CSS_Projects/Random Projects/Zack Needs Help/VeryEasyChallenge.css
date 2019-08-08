@@ -1,0 +1,28 @@
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+#CheckPlease {
+  height: 800px;
+  width: 800px;
+  border: 1px solid black;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.black {
+  background-color: black;
+  
+}
+
+.black, .white {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  float: none;
+  padding: none;
+  margin: none;
+}
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tech-design-mag" transform="translate(-1118.000000, -91.000000)" fill="#898691">
+            <g id="search" transform="translate(1051.000000, 91.000000)">
+                <g transform="translate(68.000000, 0.000000)">
+                    <path d="M12,18 C7.02943725,18 3,13.9705627 3,9 C3,4.02943725 7.02943725,0 12,0 C16.9705627,0 21,4.02943725 21,9 C21,13.9705627 16.9705627,18 12,18 Z M12,15 C15.3137085,15 18,12.3137085 18,9 C18,5.6862915 15.3137085,3 12,3 C8.6862915,3 6,5.6862915 6,9 C6,12.3137085 8.6862915,15 12,15 Z" id="Oval-2"></path>
+                    <rect id="Rectangle-5" transform="translate(4.146449, 17.000000) rotate(-45.000000) translate(-4.146449, -17.000000) " x="-0.853551482" y="15.5" width="10" height="3"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
