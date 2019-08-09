@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Road to Hire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>My Road To Hire ToDo App!</h1>
+
+  <div>
+    <h3>Count of completed and open tasks</h3>
+    <p id="count"></p>
+    <p id="openCount"></p>
+  </div>
+  <div>
+    <h3>Press key t if completed, key f if still open or key a to print all entries in array  </h3>
+    <p id="task"></p>    
+  </div>
+  <div>
+    <h4>Completed Tasks</h4>
+    <p id="completed"></p>    
+  </div>
+  <div>
+    <h4 style="color: red";>Open Tasks</h4>
+    <p id="notcompleted" ></p>  
+  </div>
+  <div style="width: 400px;">
+    <h4 >Entries in Array Displayed in Table</h4>
+    <table id="datatable">
+      <tr>
+        <th>Task</th>
+        <th>Status</th>        
+      </tr>     
+    </table> 
+  </div>
+  <div style="width: 400px;">
+    <h4 >Entries in Array Dumped to Page</h4>
+    <p id="datadump"></p>      
+  </div>
+  
+  
+  <script>
+
+    // MY IN MEMORY DATABASE   
+    
+    var database = [
+      { task: "Read More Javascript", completed: false },
+      { task: "Read NodeJs", completed: false },
+      { task: "Learn about Vuejs", completed: false },
+      { task: "Read about HTML", completed: true },
+      { task: "Read about CSS", completed: true },
+      { task: "Learn Bootstrap", completed: false },
+      { task: "Build SQL database", completed: false },
+      { task: "Attend Mongo Conference", completed: false },
+      { task: "Buy NodeJS Swag", completed: true },
+    ];
+
+    // We need a counter to record the number of completed tasks
+    var count = 0;
+
+    // We need a counter to record the number of open tasks
+    var openCount = 0;
+
+    // record the number of tasks in our database
+    var taskLength = database.length
+
+    // keep record of which our position in the database array
+    // set default to the beginning of the array
+    var databaseIndex = 0
+
+    // FUNCTIONS
+    // ==============================================================================
+
+    // Function to render tasks.
+    function renderTask() {
+       if (databaseIndex <= (taskLength - 1)) {
+        document.querySelector("#task").innerHTML = database[databaseIndex].task;
+      }
+      // If there aren't, render the end game screen.
+      else {
+        document.querySelector("#task").innerHTML = "No more tasks in database!";
+        document.querySelector("#count").innerHTML = "You've completed: " + count + " out of " + taskLength;
+        document.querySelector("#openCount").innerHTML = "You still have " + openCount + " tasks to complete";
+      }
+    }
+
+    // Function that keeps track of our completed tasks...
+    function updateTasks() {
+      document.querySelector("#count").innerHTML = "Completed: " + count;
+      document.querySelector("#openCount").innerHTML = "Not Completed: " + openCount;
+    }
+
+    // this function loops through array and renders a table
+    function renderTable() {
+
+      // this iterator reflects es6 syntax
+      database.forEach((d, index) => {
+        let tableBody = document.getElementById('datatable');
+        var newRow = tableBody.insertRow(index + 1);
+        var taskCell = newRow.insertCell(0);
+        var statusCell = newRow.insertCell(1);
+        var taskText = document.createTextNode(d.task);
+        var statusText = document.createTextNode(d.completed);
+        taskCell.appendChild(taskText);
+        statusCell.appendChild(statusText);
+      })
+      
+    }
+
+    // this function loops through array and renders a table
+    function dumpTable() {
+
+      // this iterator reflects es5 syntax
+      for (var x=0; x < database.length; x++){
+        console.log(database[x])
+        var newElement = document.createElement("p")
+        newElement.innerHTML =  JSON.stringify(database[x])
+        document.querySelector("#datadump").append(newElement);
+      } 
+    }
+
+    // MAIN PROCESS
+    // ==============================================================================
+
+    // Calling functions to start the game.
+    renderTask();
+    updateTasks();
+
+    // When the user presses a key, it will run the following function...
+    document.onkeyup = function(event) {
+      
+
+      // Determine which key was pressed, make it lowercase, and set it to the userInput variable.
+      var userInput = event.key.toLowerCase();
+      // If there are no more questions, stop the function.
+      if (databaseIndex === taskLength) {
+        return;
+      }
+
+      // based on the value of the user input, we execute a specific code block
+      // This works like "if else" statement ... but a better code pattern for certain use cases
+      
+      switch(userInput) {
+        case 't':
+          database[databaseIndex].completed = true          
+          var node = document.createElement("LI");                 // Create a <li> node
+          var textnode = document.createTextNode(database[databaseIndex].task);         // Create a text node
+          node.appendChild(textnode);                              // Append the text to <li>
+          document.getElementById("completed").appendChild(node);     // Append <li> to <ul> with id="myList"
+          count++
+          updateTasks()          
+          databaseIndex++
+          renderTask();
+          break;
+        case 'f':
+          database[databaseIndex].completed = false         
+          var node = document.createElement("LI");                 // Create a <li> node
+          var textnode = document.createTextNode(database[databaseIndex].task);         // Create a text node
+          node.appendChild(textnode);                              // Append the text to <li>
+          document.getElementById("notcompleted").appendChild(node);     // Append <li> to <ul> with id="myList"
+          openCount++
+          updateTasks()          
+          databaseIndex++
+          renderTask();
+          break;
+        
+        // add a new case for the letter 'a' and associated logic to loop through array
+        case 'a': 
+          renderTable()
+          dumpTable()
+          break;
+        default: 
+         alert("Wrong key - try either a 't', 'f' or 'a' ");
+      }    
+
+    };
+
+  </script>
+
+</body>
+
+</html>

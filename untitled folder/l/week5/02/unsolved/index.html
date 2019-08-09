@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Road to Hire</title>
+</head>
+
+<body>
+
+  <h1>My Road To Hire ToDo App!</h1>
+
+  <div>
+    <h3>Count of tasks I finished</h3>
+    <p id="count"></p>
+  </div>
+  <div>
+    <h3>Task completed? (t=true, f=false</h3>
+    <p id="task"></p>
+  </div>
+  <div>
+    <h4>Completed Tasks</h4>
+    <p id="completed"></p>    
+  </div>
+  <div>
+    <h4 style="color: red";>Open Tasks</h4>
+    <p id="notcompleted" ></p>  
+  </div>
+  
+  <script>
+
+    // MY IN MEMORY DATABASE   
+    
+    var database = [
+      { task: "Read More Javascript", completed: false },
+      { task: "Read NodeJs", completed: false },
+      { task: "Learn about Vuejs", completed: false },
+      { task: "Read about HTML", completed: true },
+      { task: "Read about CSS", completed: true },
+      { task: "Learn Bootstrap", completed: false },
+      { task: "Build SQL database", completed: false },
+      { task: "Attend Mongo Conference", completed: false },
+      { task: "Buy NodeJS Swag", completed: true },
+    ];
+
+    // We need a counter to record the number of completed tasks
+    var count = 0;
+
+    // record the number of tasks in our database
+    var taskLength = database.length
+
+    // keep record of which our position in the database array
+    // set default to the beginning of the array
+    var databaseIndex = 0
+
+    // FUNCTIONS
+    // ==============================================================================
+
+    // Function to render taks.
+    function renderTask() {
+       if (databaseIndex <= (taskLength - 1)) {
+        document.querySelector("#task").innerHTML = database[databaseIndex].task;
+      }
+      // If there aren't, render the end game screen.
+      else {
+        document.querySelector("#task").innerHTML = "No more tasks in database!";
+        document.querySelector("#count").innerHTML = "You've completed: " + count + " out of " + taskLength;
+      }
+    }
+
+    // Function that keeps track of our completed tasks...
+    function updateTasks() {
+      document.querySelector("#count").innerHTML = "Completed: " + count;
+    }
+
+
+    // MAIN PROCESS
+    // ==============================================================================
+
+    // Calling functions to start the game.
+    renderTask();
+    updateTasks();
+
+    // When the user presses a key, it will run the following function...
+    document.onkeyup = function(event) {
+
+      // If there are no more questions, stop the function.
+      if (databaseIndex === taskLength) {
+        return;
+      }
+
+      // Determine which key was pressed, make it lowercase, and set it to the userInput variable.
+      var userInput = event.key.toLowerCase();
+
+      // based on the value of the user input, we execute a specific code block
+      // This works like "if else" statement ... but a better code pattern for certain use cases
+      
+      switch(userInput) {
+        case 't':
+          database[databaseIndex].completed = true          
+          var node = document.createElement("LI");                 // Create a <li> node
+          var textnode = document.createTextNode(database[databaseIndex].task);         // Create a text node
+          node.appendChild(textnode);                              // Append the text to <li>
+          document.getElementById("completed").appendChild(node);     // Append <li> to <ul> with id="myList"
+          count++
+          document.querySelector("#count").innerHTML = count;
+          databaseIndex++
+          renderTask();
+          break;
+        case 'f':
+          database[databaseIndex].completed = false         
+          var node = document.createElement("LI");                 // Create a <li> node
+          var textnode = document.createTextNode(database[databaseIndex].task);         // Create a text node
+          node.appendChild(textnode);                              // Append the text to <li>
+          document.getElementById("notcompleted").appendChild(node);     // Append <li> to <ul> with id="myList"
+          databaseIndex++
+          renderTask();
+          break;
+        default: 
+         alert("Wrong key - try either a 't' or 'f' ");
+      }    
+
+    };
+
+  </script>
+
+</body>
+
+</html>

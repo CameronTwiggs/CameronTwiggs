@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Road to Hire</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Road to Hire Movie Search</h1>
+
+    <!-- This form will be where users input data about the movies -->
+    <form id="movie-form">
+      <label for="movie-input">Search for a movie</label>
+      <input type="text" id="movie-input"><br>
+
+      <!-- This button will trigger our fetch -->
+      <input id="find-movie" type="submit" value="Movie Search">
+    </form>
+
+    <!-- We'll be dumping our JSON contents in here -->
+    <div id="movie-view"></div>
+    
+    <script type="text/javascript">
+      // First, select the button element from the web page
+      let button = document.querySelector('#find-movie')
+      // next select the div where we want to render content
+      let postMovie = document.querySelector('#movie-view')
+      // This .on("click") function will trigger the function which executes fetch
+      button.addEventListener("click", function(event) {
+        // event.preventDefault() can be used to prevent an event's default behavior.
+        // Here, it prevents the submit button from trying to submit a form when clicked
+        event.preventDefault();
+        // Here we grab the text from the input box        
+        var movie = document.getElementById("movie-form").elements[0].value;
+        // Here we construct our URL
+        // additional key = af2d8123
+        var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=42794a3e";
+       
+        
+        // The fetch command triggers the http call using the url from above
+        fetch(queryURL, {       
+          method: "GET"
+        }).then(function(response) {
+           return response.json()
+        }).then(function(myjson) {
+          console.log(myjson)
+          
+          // at this point we have an array of objects store in the variable myjson
+          // we can now begin to work this data to do amazing things
+
+
+        })       
+        // -----------------------------------------------------------------------
+      });
+    </script>
+  </div>
+</body>
+
+</html>

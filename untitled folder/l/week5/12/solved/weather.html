@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Road to Hire</title>
+</head>
+
+<body>
+
+  <h1>The Road to Hire Weather Station</h1>
+  <!-- Retrieved data will be dumped here -->
+  <div class="city">CITY</div>
+  
+  
+  <script type="text/javascript">
+    // This is our API key
+    var APIKey = "166a433c57516f51dfab1f7edaed8413";
+    // extra API= "b6907d289e10d714a6e88b30761fae22";
+    // Here we are building the URL we need to query the database
+    // cityids id=524901,703448,2643743
+    /*
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+      "q=London&units=metric&appid=" + APIKey;
+      */
+    var queryURL = "https://api.openweathermap.org/data/2.5/group?" +
+      "id=524901,703448,2643743&units=metric&appid=" + APIKey;
+    // Here we run our fetch call to the OpenWeatherMap API
+    let cityID = document.querySelector('.city')
+    
+    fetch(queryURL, { 
+          method: "GET"
+        })
+        .then(function(response) {
+           return response.json()
+        })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(myjson) {
+        // Log the queryURL
+        console.log(queryURL);
+        // Log the resulting object
+        console.log(myjson);
+        // Transfer content to HTML
+        let weatherObj = myjson.list.filter((s) => s.name === 'Moscow')
+        console.log(weatherObj)
+            
+        // finally - lets render the data to the webpage
+        var node = document.createElement("LI");                         // Create a <li> node
+        var textnode = document.createTextNode(JSON.stringify(weatherObj));  // Create a text node
+        node.appendChild(textnode);                                      // Append the text to <li>
+
+        cityID.appendChild(node); 
+      } )  
+       
+  </script>
+</body>
+</html>

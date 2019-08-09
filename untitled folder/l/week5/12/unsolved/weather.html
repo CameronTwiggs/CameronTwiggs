@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Road to Hire</title>
+</head>
+
+<body>
+
+  <h1>The Road to Hire Weather Station</h1>
+  <!-- Retrieved data will be dumped here -->
+  <div class="city">CITY of MOSCOW</div>
+  
+  
+  <script type="text/javascript">    
+    var APIKey = "166a433c57516f51dfab1f7edaed8413";    
+    var queryURL = "https://api.openweathermap.org/data/2.5/group?" +
+      "id=524901,703448,2643743&units=metric&appid=" + APIKey;
+  
+    let cityID = document.querySelector('.city')
+    
+    fetch(queryURL, { 
+          method: "GET"
+        })
+        .then(function(response) {
+           return response.json()
+        })      
+        .then(function(myjson) {
+        
+            ///////////////////////////////////
+            /////   YOUR CODE GOES HERE //////
+            /////////////////////////////////
+          console.log(myjson.list[0].name)
+
+         
+
+
+
+
+
+
+
+       
+      } )  
+       
+  </script>
+</body>
+</html>
+
+
+
+
+<!-- 
+let button = document.querySelector('#find-movie')      
+let postMovie = document.querySelector('#movie-view')     
+button.addEventListener("click", function(event) {        
+  event.preventDefault();             
+  var movie = document.getElementById("movie-form").elements[0].value;       
+  var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=42794a3e";
+  
+  fetch(queryURL, {    
+    method: "GET"
+  }).then(function(response) {
+     return response.json()
+  }).then(function(myjson) {
+    console.log(myjson)
+    console.log(`The length of my array is ${myjson.Search.length}`)
+
+    let movieObj = myjson.Search.filter((s) => s.Year === '1942')
+    console.log(movieObj)
+      
+    // finally - lets render the data to the webpage
+    var node = document.createElement("LI");                         // Create a <li> node
+    var textnode = document.createTextNode(JSON.stringify(movieObj));  // Create a text node
+    node.appendChild(textnode);                                      // Append the text to <li>
+
+    postMovie.appendChild(node);  -->

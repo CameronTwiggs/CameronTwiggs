@@ -1,0 +1,10 @@
+
+div {
+    border: solid; 
+    margin: 50px;
+    /* color: red; */
+}
+
+#completed {
+    color: green;
+}

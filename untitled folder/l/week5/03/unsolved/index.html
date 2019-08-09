@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Road to Hire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>My Road To Hire ToDo App!</h1>
+
+  <div>
+    <h3>Count of completed and open tasks</h3>
+    <p id="count"></p>
+    <p id="openCount"></p>
+  </div>
+  <div>
+    <h3>Press key t if completed, key f if still open or key a to print all entries in array  </h3>
+    <p id="task"></p>    
+  </div>
+  <div>
+    <h4>Completed Tasks</h4>
+    <p id="completed"></p>    
+  </div>
+  <div>
+    <h4 style="color: red";>Open Tasks</h4>
+    <p id="notcompleted" ></p>  
+  </div>
+
+  <!-- BE SURE TO ADD A DIV HERE WITH AN HTML ELEMENT TO APPEND YOUR ARRAY ENTRIES-->
+  <div>
+    <p id="dump"></p>
+  </div>
+  
+  <script>
+
+    // MY IN MEMORY DATABASE   
+    
+    var database = [
+      { task: "Read More Javascript", completed: false },
+      { task: "Read NodeJs", completed: false },
+      { task: "Learn about Vuejs", completed: false },
+      { task: "Read about HTML", completed: true },
+      { task: "Read about CSS", completed: true },
+      { task: "Learn Bootstrap", completed: false },
+      { task: "Build SQL database", completed: false },
+      { task: "Attend Mongo Conference", completed: false },
+      { task: "Buy NodeJS Swag", completed: true },
+    ];
+
+
+    console.log(JSON.stringify(database))
+    // We need a counter to record the number of completed tasks
+    var count = 0;
+
+    // We need a counter to record the number of open tasks
+    var openCount = 0;
+
+    // record the number of tasks in our database
+    var taskLength = database.length
+
+    // keep record of which our position in the database array
+    // set default to the beginning of the array
+    var databaseIndex = 0
+
+    // FUNCTIONS
+    // ==============================================================================
+
+    // Function to render tasks.
+    function renderTask() {
+       if (databaseIndex <= (taskLength - 1)) {
+        document.querySelector("#task").innerHTML = database[databaseIndex].task;
+      }
+      // If there aren't, render the end game screen.
+      else {
+        document.querySelector("#task").innerHTML = "No more tasks in database!";
+        document.querySelector("#count").innerHTML = "You've completed: " + count + " out of " + taskLength;
+        document.querySelector("#openCount").innerHTML = "You still have " + openCount + " tasks to complete";
+      }
+    }
+
+    // Function that keeps track of our completed tasks...
+    function updateTasks() {
+      document.querySelector("#count").innerHTML = "Completed: " + count;
+      document.querySelector("#openCount").innerHTML = "Not Completed: " + openCount;
+    }
+
+    //////////////////////////////////////////////////////////////////
+    // You will need a function here which is executed by
+    // the switch case below. The function should loop through
+    // an array and print each entry to the web page
+    // You can either render a table ... or simply print each entry
+    // to the web page (note - you will need to use JSON.stringify() to turn each
+    // each array entry into a string before appending it to an element on a page
+    //////////////////////////////////////////////////////////////////
+    function printall() {
+      return JSON.stringify(database);
+    }
+
+    // MAIN PROCESS
+    // ==============================================================================
+
+    // Calling functions to start the game.
+    renderTask();
+    updateTasks();
+
+    // When the user presses a key, it will run the following function...
+    document.onkeyup = function(event) {
+
+      // If there are no more questions, stop the function.
+      if (databaseIndex === taskLength) {
+        return;
+      }
+
+      // Determine which key was pressed, make it lowercase, and set it to the userInput variable.
+      var userInput = event.key.toLowerCase();
+
+      // based on the value of the user input, we execute a specific code block
+      // This works like "if else" statement ... but a better code pattern for certain use cases
+      
+      switch(userInput) {
+        case 't':
+          database[databaseIndex].completed = true          
+          var node = document.createElement("LI");                 // Create a <li> node
+          var textnode = document.createTextNode(database[databaseIndex].task);         // Create a text node
+          node.appendChild(textnode);                              // Append the text to <li>
+          document.getElementById("completed").appendChild(node);     // Append <li> to <ul> with id="myList"
+          count++
+          updateTasks()          
+          databaseIndex++
+          renderTask();
+          break;
+        case 'f':
+          database[databaseIndex].completed = false         
+          var node = document.createElement("LI");                 // Create a <li> node
+          var textnode = document.createTextNode(database[databaseIndex].task);         // Create a text node
+          node.appendChild(textnode);                              // Append the text to <li>
+          document.getElementById("notcompleted").appendChild(node);     // Append <li> to <ul> with id="myList"
+          openCount++
+          updateTasks()          
+          databaseIndex++
+          renderTask();
+          break;
+        ///////////////////////////////////////
+        // NEW CODE SHOULD BE ENTERED HERE
+        // add a new case for the letter 'a' and associated logic to loop through array
+        case "a":
+            console.log("a")
+            var node = document.createElement("p");
+            var textnode = document.createTextNode(JSON.stringify(database));
+            node.appendChild(textnode);
+            document.getElementById("dump").appendChild(node)
+        break;
+        default: 
+         alert("Wrong key - try either a 't' or 'f' ");
+      }    
+
+    };
+
+  </script>
+
+</body>
+
+</html>
