@@ -1,21 +1,17 @@
+*{
+    border: dotted black 1px
+}
 
-body, html {
-    height: 100%;
-    width: 100%;
+ html {
+    margin: auto;
     border: solid black 1px;
 }
 
 body {
-    margin: 0;
+    border: solid blue 1px;
     background-image: url('images/high-resolution-galaxy-desktop-background-20.jpg') ;
     background-size: 90%;
     object-fit: fill;
-}
-
-h1 {
- text-align: center;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- color: white;
 }
 
 .nav, .nav__list{
@@ -24,6 +20,7 @@ h1 {
 }
 
 .nav{
+    align-self: flex-end;
     justify-content: flex-end;
 }
 
@@ -37,11 +34,30 @@ h1 {
     padding: 20px;
 }
 
+.mom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .main{
-    background-color: rgba(112, 229, 233, 0.596);
+    max-height: 100%;
+    max-width: 90%;
+    background-color: rgba(152, 251, 152, 0.596);
     display: flex;
-   
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.main__title {
+    margin: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 100px
 }
 
 .main__intro{
@@ -51,14 +67,21 @@ h1 {
     margin: 2%
 }
 
-
 .main__picture {
-    /* max-width: 30%; */
     height: 35%;
     width: 35%;
     margin: 0 auto;
     border-radius: 50%;
-    display: block;
     margin: auto;
     margin: 2%;
+}
+
+
+.why {
+    margin-top: 100px;
+    align-self: flex-end;
+}
+
+.why__title {
+    text-align: right;
 }
