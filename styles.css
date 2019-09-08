@@ -1,8 +1,4 @@
-*{
-    border: dotted black 1px
-}
-
- html {
+html {
     margin: auto;
     border: solid black 1px;
 }
@@ -15,6 +11,7 @@ body {
 }
 
 .nav, .nav__list{
+    position: sticky;
     display: flex;
     flex-flow: row wrap;
 }
@@ -34,54 +31,94 @@ body {
     padding: 20px;
 }
 
+
+.wave{
+    height: 16px;
+    width: 170px;
+    background-image: url('images/wave.svg');
+    margin: 5% 0;
+    transform: scale(2);
+}
+
 .mom {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-
-.main{
     max-height: 100%;
     max-width: 90%;
-    background-color: rgba(152, 251, 152, 0.596);
+    margin: auto;
+}
+
+/* .sectionText{
+    font:40px;
+    text-align: center;
+}
+
+.sectionTitle{
+    font:100px;
+    text-align: center;
+} */
+
+.main{
     display: flex;
     align-items: center;
     flex-flow: column wrap;
 }
 
 .main__title {
-    margin: auto;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
     font-size: 100px
 }
 
 .main__intro{
-    display: inline-block;
     text-align: center;
     font-size: 40px;
-    margin: 2%
 }
 
 .main__picture {
     height: 35%;
     width: 35%;
-    margin: 0 auto;
     border-radius: 50%;
-    margin: auto;
-    margin: 2%;
-}
-
-
-.why {
-    margin-top: 100px;
-    align-self: flex-end;
 }
 
 .why__title {
-    text-align: right;
+    text-align: center;
+    font-size: 100px;
+}
+
+.why__text{
+    font-size: 40px;
+    text-align: center;
+}
+
+.look__title{
+    font-size: 100px;
+    text-align: center;
+}
+
+.look__text{
+    font-size: 40px;
+    text-align: center;
+}
+
+.look__sectionWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.look__section{
+ display:flex;
+ flex-direction:column;
+ height: 10%;
+ width: 25%;
+ justify-content:center;
+ align-items:center;
+}
+
+.look__section, img{
+    width:80%;
+    border-radius: 35%;
 }
