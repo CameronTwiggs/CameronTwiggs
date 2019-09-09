@@ -29,6 +29,7 @@ body {
 .nav__list{ 
     height: 50px;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -112,4 +113,25 @@ body {
 .look__section, img{
     width:80%;
     border-radius: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav__list{
+        flex-flow: row;
+        justify-content: center
+    }
+    .nav__list a {
+        font-size: 12.5px;
+    }
+
+    .section__title{
+        font-size: 50px;
+    }
+    .section__text{
+        font-size: 20px;
+    }
+  
+
+
+
 }
