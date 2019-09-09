@@ -17,13 +17,14 @@
             <li class="list__listitem"><a href="#">Contact</a></li>
             <li class="list__listitem"><a href="#">About Me</a></li>
             <li class="list__listitem"><a href="#">Gallery</a></li>
+            <li class="list__listitem"><a href="#">Gallery</a></li>
         </ul>
     </nav>
 
     <div class="mom">
         <section class="main" role="main">
             <h1 class="section__title">About Cameron Twiggs.</h1>
-            <img class="main__picture" src="images/T5VCY49B3-UFSMN6Y6A-af3fcd9e3891-48 (1).jpeg"
+            <img class="main__picture" src="images/cameron.jpeg"
                 alt="Cameron Lamar Twiggs">
             <p class="section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ex aperiam nemo
                 ipsum illo voluptates incidunt ipsa quidem nisi est voluptate facilis pariatur veniam, unde distinctio
@@ -37,19 +38,19 @@
         </section>
         <div class="wave"></div>
         <section class="look">
-            <h2 class="section__title">Heres some of my work.</h2>
+            <h2 class="section__title">Here's some of my work.</h2>
             <p class="section__text">I know that this place is kinda looks retro 90's looking but let me show you some better pieces.</p>
             <div class="look__sectionWrapper">
                 <div class="look__section">
-                        <img src="images/Screen Shot 2019-09-07 at 4.53.36 PM.png" alt="">
+                        <img src="images/DTWO.png" alt="">
+                        <p>Lorem, ipsum.</p>
+                </div>
+                <div class="look__section">
+                        <img src="images/DTWO.png" alt="">
                     <p>Lorem, ipsum.</p>
                 </div>
                 <div class="look__section">
-                        <img src="images/Screen Shot 2019-09-07 at 4.53.36 PM.png" alt="">
-                    <p>Lorem, ipsum.</p>
-                </div>
-                <div class="look__section">
-                    <img src="images/Screen Shot 2019-09-07 at 4.53.36 PM.png" alt="">
+                    <img src="images/DTWO.png" alt="">
                     <p> Lorem, ipsum.</p>
                 </div>
             </div>
@@ -59,24 +60,20 @@
         var navbar = document.getElementById("navbar");
         var sticky = navbar.offsetTop;
 
-function getResolution() {
-        alert("Your screen resolution is: " + screen.width + "x" + screen.height);
-    }
-    
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
 
-if (screen.width>600) {
-            window.onscroll = function() {myFunction()};
-        }
-        else {
-            navbar.classList.remove("sticky")
-        }
+        if (screen.width>600) {
+                    window.onscroll = function() {myFunction()};
+                }
+                else {
+                    navbar.classList.remove("sticky")
+                }
 
     </script>
 </body>

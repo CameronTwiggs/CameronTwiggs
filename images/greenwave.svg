@@ -1,0 +1,28 @@
+<svg width="170" height="16" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" fill="#1db954" d="m13.3424,0.24805l-12.3912,12.39125l3.11251,3.1125l12.39119,-12.39125l-3.1125,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_2" fill="#1db954" d="m31.3162,0.24805l-12.3912,12.39125l3.1125,3.1125l12.3912,-12.39125l-3.1125,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_3" fill="#1db954" d="m9.7547,3.3606l12.3912,12.3912l3.1125,-3.1125l-12.3912,-12.39121l-3.1125,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_4" fill="#1db954" d="m27.7285,3.3606l12.3912,12.3912l3.1125,-3.1125l-12.3912,-12.39121l-3.1125,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_5" fill="#1db954" d="m49.29,0.24805l-12.3912,12.39125l3.1125,3.1125l12.3912,-12.39125l-3.1125,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_6" fill="#1db954" d="m45.7023,3.3606l12.3912,12.3912l3.1125,-3.1125l-12.3912,-12.39121l-3.1125,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_7" fill="#1db954" d="m67.2638,0.24805l-12.3912,12.39125l3.1125,3.1125l12.3912,-12.39125l-3.1125,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_8" fill="#1db954" d="m63.6761,3.3606l12.3912,12.3912l3.1125,-3.1125l-12.3912,-12.39121l-3.1125,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_9" fill="#1db954" d="m85.2376,0.24805l-12.3912,12.39125l3.1125,3.1125l12.3912,-12.39125l-3.1125,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_10" fill="#1db954" d="m81.6499,3.3606l12.3912,12.3912l3.1125,-3.1125l-12.3912,-12.39121l-3.1125,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_11" fill="#1db954" d="m103.211,0.24805l-12.3908,12.39125l3.1125,3.1125l12.3913,-12.39125l-3.113,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_12" fill="#1db954" d="m99.6237,3.3606l12.3913,12.3912l3.112,-3.1125l-12.391,-12.39121l-3.1123,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_13" fill="#1db954" d="m121.185,0.24805l-12.391,12.39125l3.112,3.1125l12.392,-12.39125l-3.113,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_14" fill="#1db954" d="m117.597,3.3606l12.392,12.3912l3.112,-3.1125l-12.391,-12.39121l-3.113,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_15" fill="#1db954" d="m139.159,0.24805l-12.391,12.39125l3.112,3.1125l12.392,-12.39125l-3.113,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_16" fill="#1db954" d="m135.571,3.3606l12.391,12.3912l3.113,-3.1125l-12.391,-12.39121l-3.113,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_17" fill="#1db954" d="m157.133,0.24805l-12.391,12.39125l3.112,3.1125l12.391,-12.39125l-3.112,-3.1125z" clip-rule="evenodd" fill-rule="evenodd"/>
+  <path id="svg_18" fill="#1db954" d="m153.545,3.3606l12.391,12.3912l3.113,-3.1125l-12.391,-12.39121l-3.113,3.11251z" clip-rule="evenodd" fill-rule="evenodd"/>
+ </g>
+</svg>

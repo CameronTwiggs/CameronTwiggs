@@ -20,7 +20,6 @@ html {
 
 body {
     background-color: #3B444B  ;
-    background-image: url('images/high-resolution-galaxy-desktop-background-20.jpg') ;
     background-size: 90%;
     object-fit: fill;
     margin: 0;
@@ -57,7 +56,7 @@ body {
     height: 16px;
     width: 170px;
     margin: 5% 0;
-    background-image: url('images/wave.svg');
+    background-image: url('images/greenwave.svg');
     transform: scale(2);
 }
 
@@ -117,21 +116,20 @@ body {
 
 @media only screen and (max-width: 600px) {
     .nav__list{
-        flex-flow: row;
-        justify-content: center
+        flex-direction: row;
+        justify-content: space-between;
     }
     .nav__list a {
         font-size: 12.5px;
     }
-
     .section__title{
         font-size: 50px;
     }
     .section__text{
         font-size: 20px;
     }
-  
-
-
-
+    .look__sectionWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
 }
