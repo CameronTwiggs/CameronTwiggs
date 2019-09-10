@@ -89,7 +89,6 @@ body {
 }
 
 .main__picture {
-    height: 35%;
     width: 35%;
     border-radius: 50%;
 }
@@ -122,11 +121,17 @@ body {
     .nav__list a {
         font-size: 12.5px;
     }
+
+    .main__picture{
+        width: 50%;
+    }
+
     .section__title{
         font-size: 50px;
     }
     .section__text{
         font-size: 20px;
+        margin: 4px;
     }
     .look__sectionWrapper{
         flex-direction: column;
