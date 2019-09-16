@@ -38,11 +38,15 @@ body {
 }
 
 .nav__list a{
-    padding: 20px;
+    padding: 20px 20px 17px 20px;
     color: grey;
     text-decoration: none;
     font-size:  25px;
     
+}
+
+.nav__list a:hover {
+    border: #3B444B;
 }
 
 .sticky {
@@ -90,6 +94,7 @@ body {
 
 .main__picture {
     width: 35%;
+    height: 35%;
     border-radius: 50%;
 }
 
@@ -104,12 +109,16 @@ body {
     width: 25%;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
 }
 
-.look__section, img{
-    width:80%;
+.look__section img{
+    width:100%;
+    border-radius: 5%;
+}
+
+#comingsoon div{
+    background-color: #3B444B;
     border-radius: 5%;
 }
 
@@ -142,5 +151,5 @@ body {
 @media only screen and (max-width: 400px) {
     *{
         display: none;
-    }
+    } 
 }
