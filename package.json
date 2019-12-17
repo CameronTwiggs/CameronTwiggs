@@ -1,0 +1,22 @@
+{
+  "name": "camerontwiggs",
+  "version": "1.0.0",
+  "description": "My Website",
+  "main": "index.js",
+  "scripts": {
+    "deploy": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CameronTwiggs/CameronTwiggs.git"
+  },
+  "author": "Cameron Twiggs <cameron.020617@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CameronTwiggs/CameronTwiggs/issues"
+  },
+  "homepage": "https://github.com/CameronTwiggs/CameronTwiggs#readme",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
