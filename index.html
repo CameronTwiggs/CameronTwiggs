@@ -1,60 +1,28 @@
 <!DOCTYPE html>
 <html>
+    <!-- #9DE86F  green -->
+    <!-- #363b3e  black -->
 
 <head>
     <title>About Cameron Twiggs.</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="">
-    <meta name="keywords" content="Cameron, Twiggs, Cameron Twiggs, Cameron Lamar Twiggs, Lamar,">
+    <meta name="description" content="An introduction to the nerd that is cameron twiggs ">
+    <meta name="keywords" content="Cameron, Twiggs, Cameron Twiggs, Cameron Lamar Twiggs, Lamar, NERD">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <nav class="nav" id="navbar">
         <ul class="nav__list">
-            <li class="list__listitem"><a href="#">Contact</a></li>
-            <li class="list__listitem"><a href="#">About Me</a></li>
-            <li class="list__listitem"><a href="gallary.html">Gallery</a></li>
-            <li class="list__listitem"><a href="#">Gallery</a></li>
+            <li class="list__listitem"><a href="#" class="nav__a">Contact</a></li>
+            <li class="list__listitem"><a href="#" class="nav__a">About Me</a></li>
+            <li class="list__listitem"><a href="#" class="nav__a">Gallery</a></li>
         </ul>
     </nav>
 
-    
 
-    <div class="mom">
-        <section class="main" role="main">
-            <h1 class="section__title">About Cameron Twiggs.</h1>
-            <img class="main__picture" src="images/cameron.png"
-                alt="Cameron Lamar Twiggs">
-            <p class="section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ex aperiam nemo
-                ipsum illo voluptates incidunt ipsa quidem nisi est voluptate facilis pariatur veniam, unde distinctio
-                voluptatum omnis, rem doloribus?</p>
-        </section>
-        <div class="wave"></div>
-        <section class="why">
-            <h2 class="section__title">What is this place?</h1>
-            <p class="section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, excepturi distinctio. Minus iure aperiam quibusdam, eaque, reprehenderit in aut obcaecati deserunt tempore eveniet perspiciatis facere unde nulla laborum? Numquam, fugiat?</p>
-        </section>
-        <div class="wave"></div>
-        <section class="look">
-            <h2 class="section__title">Here's some of my work.</h2>
-            <p class="section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente dolorum quo neque officia quas voluptatum similique quisquam ipsum velit. Vitae laborum vel velit natus, odio quis necessitatibus odit quasi!</p>
-            <div class="look__sectionWrapper">
-                <div class="look__section">
-                        <img src="images/DTWO.png" alt="">
-                        <p>Lorem, ipsum.</p>
-                </div>
-                <div class="look__section">
-                        <img src="images/D&T.png" alt="">
-                    <p>Lorem, ipsum.</p>
-                </div>
-                <div class="look__section" id="comingsoon">
-                    <div><p>Lorem, ipsum.</p></div>
-                </div>
-            </div>
-        </section>
-    </div>
+
     <script>
         var navbar = document.getElementById("navbar");
         var sticky = navbar.offsetTop;
@@ -66,14 +34,13 @@
                 navbar.classList.remove("sticky");
             }
         }
-
+    
         if (screen.width > 600) {
                     window.onscroll = function() {myFunction()};
                 }
                 else {
                     navbar.classList.remove("sticky")
                 }
-
     </script>
 </body>
 
