@@ -72,7 +72,9 @@ html, body {
     align-items: center;
 }
 
-.herotext {
+.hero__text {
     display: inline-block;
-    font-size: 200em;
+    width: 9em;
+    font-size: 4em;
+    margin-left: 3em;
 }
