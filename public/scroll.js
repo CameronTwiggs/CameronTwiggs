@@ -1,5 +1,5 @@
 const nav = document.querySelector(".nav");
-const main = document.querySelector("main");
+const main = document.querySelector(".sectionone");
 
 const sectionOneOptions = {
   rootMargin: "200px"
@@ -8,7 +8,7 @@ const sectionOneOptions = {
 const sectionOneObserver = new IntersectionObserver(function(entries,sectionOneObserver) {
   entries.forEach(entry => {
       console.log(entry.isIntersecting);
-    if (!entry.isIntersecting) {
+    if (entry.isIntersecting) {
         console.log("added");
       nav.classList.add("nav-scroll");
     } else {
